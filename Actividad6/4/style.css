@@ -1,0 +1,31 @@
+/* { font: Arial, Helvetica, sans-serif; }          Per a tots els elements de la pàgina */
+/* { color: #555; }                                 Per a tots els paràgrafs de la pàgina */
+/* { font-style: italic; }                          Per a tots els paràgrafs continguts dins un id="par" */
+/* { color: #CC3300; }                              Per a tots els enllaços de la pàgina no visitats */
+/* { background: #FFFFCC; font-size:20px}           Per a tots els elements "em" */
+/* { border: 1px solid #FF9900; padding: .1em; }    Per a tots els elements "em" de classe "especial1" a tota la pàgina */
+
+* {
+  font: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: #555;
+}
+
+#par p {
+  font-style: italic;
+}
+
+a:link{
+    color: #CC3300;
+}
+
+em {
+    background: #FFFFCC;
+    font-size:20px;
+}
+
+em.especial1{
+    border: 1px solid #FF9900; padding: .1em;
+}

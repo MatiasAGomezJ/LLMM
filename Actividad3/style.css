@@ -1,0 +1,16 @@
+body {
+    background-color: darkolivegreen;
+    color:goldenrod;
+}
+
+img {
+    width: 100px;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.negrita {
+    font-weight: bold;
+}
