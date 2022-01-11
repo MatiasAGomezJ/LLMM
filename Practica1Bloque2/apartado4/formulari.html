@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartado 5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./recursos/logo.png" alt="logo" />
+      <h1>Optilu</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./historia.html">Historia</a></li>
+        <li><a href="./activitats.html">Activitats</a></li>
+        <li><a href="./home.html">Volver</a></li>
+      </ul>
+    </nav>
+    <main>
+      <form action="mailto:mgomez@cifpfbmoll.eu" method="post">
+        <label for="nom">Nom: </label>
+        <input type="text" id="nom" name="nom" maxlength="30" />
+        <br>
+        <label for="password">Contrasenya: </label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required/>
+        <br>
+        <label for="culls">Color d'ulls: </label>
+        <input type="text" id="culls" name="culls"/>
+        <br>
+        <span>Sexe: </span>
+        <input type="radio" id="home" name="home" value="h" />
+        <label for="home">Home</label>
+        <input type="radio" id="dona" name="dona" value="d" />
+        <label for="dona">Dona</label>
+        <br>
+        <label for="anys">Anys: </label>
+        <input type="number" id="anys" name="anys" min="16" max="99" required/>
+        <br>
+        <label for="mail">Correu electronic: </label>
+        <input type="email" id="mail" name="mail" required/>
+        <br>
+        <span>Activitats: </span><br>
+        <input type="checkbox" id="cantcoral" value="cantcoral">
+        <label for="cantcoral">Cant coral</label><br>
+        <input type="checkbox" id="sevillanes" value="sevillanes">
+        <label for="sevillanes">Sevillanes</label><br>
+        <input type="checkbox" id="escacs" value="escacs">
+        <label for="escacs">Escacs</label><br>
+        <input type="checkbox" id="aikido" value="aikido">
+        <label for="aikido">Aikido</label><br>
+        <input type="checkbox" id="cuina" value="cuina">
+        <label for="cuina">Cuina</label><br>
+        <br>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Esborrar" />
+      </form>
+    </main>
+    <footer>
+      <p>Optilu</p>
+      <p>5/9/1968</p>
+    </footer>
+  </body>
+</html>

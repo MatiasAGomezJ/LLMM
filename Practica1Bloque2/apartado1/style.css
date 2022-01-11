@@ -1,0 +1,15 @@
+main {
+    border: 4px solid gray;
+    background-color: lemonchiffon;
+    border-right: 0;
+}
+table{
+    border: 3px solid red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th{
+    border: 3px solid red;
+    width: 200px;
+}

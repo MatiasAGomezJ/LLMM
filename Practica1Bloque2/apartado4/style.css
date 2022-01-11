@@ -1,0 +1,88 @@
+body {
+  font-size: 1.2em;
+}
+
+ol {
+  list-style: lower-alpha;
+}
+
+/* -- Start Header -- */
+header {
+  display: flex;
+  align-items: center;
+}
+
+header > img {
+  width: 200px;
+  height: 200px;
+  margin: 25px;
+}
+
+header > h1 {
+  font-size: 5em;
+}
+/* -- End Header -- */
+
+/* -- Start Nav -- */
+nav > ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+}
+
+nav > ul > li {
+  padding: 10px;
+  color: #002dec;
+}
+
+nav > ul > li:hover {
+  background-color: #002dec;
+  color: white;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+}
+
+nav > ul > li > a:visited,
+nav > ul > li > a:link {
+  color: inherit;
+}
+
+/* -- End Nav -- */
+
+/* -- Start Footer -- */
+body {
+  /* Necesario para el footer */
+  position: relative;
+  min-height: 98vh;
+}
+
+main {
+  /* Necesario para el footer */
+  padding-bottom: 6rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+}
+/* -- End Footer -- */
+
+@media screen and (max-width: 640px) {
+  header {
+    flex-direction: column;
+  }
+  nav > ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1280px){
+  body {
+    color: red;
+  }
+}
