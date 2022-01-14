@@ -8,6 +8,11 @@ while(true) {
     };
 
     switch (true) {    
+        case input_usuario == "":
+        default:
+            texto = '"' + input_usuario + '" no es valido';
+            break;
+            
         case input_usuario % 2 == 0:
             texto += "par";
             break;
@@ -15,10 +20,6 @@ while(true) {
         case input_usuario % 2 >= 0:
         case input_usuario % 2 <= 0:
             texto += "impar";
-            break;
-                
-        default:
-            texto = input_usuario + " no es valido"
             break;
     }
 
