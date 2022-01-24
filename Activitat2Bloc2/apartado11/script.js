@@ -5,7 +5,7 @@ while(true) {
 
     if (input_usuario.toLowerCase() == "stop") {
         break;
-    };
+    }
 
     switch (true) {    
         case input_usuario == "":
@@ -17,12 +17,10 @@ while(true) {
             texto += "par";
             break;
             
-        case input_usuario % 2 >= 0:
-        case input_usuario % 2 <= 0:
+        case input_usuario % 2 != 0:
             texto += "impar";
             break;
     }
 
-    document.write(texto)
-    document.write(".<br>")
+    document.write(texto + ".<br>")
 }
