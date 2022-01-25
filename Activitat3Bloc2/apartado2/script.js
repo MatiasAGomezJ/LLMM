@@ -1,6 +1,5 @@
-function unoCien(){
+function unoACien(){
     for (let i = 1; i < 101; i++) {
-        document.write();
-        
+        document.write(i + "<br>");
     }
 }
