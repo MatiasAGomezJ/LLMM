@@ -1,5 +1,5 @@
 function eraser() {
-    let div = document.getElementById("div")
-    
-    div.removeChild(div.children[0])
+    let div = document.getElementById("div");
+
+    div.removeChild(div.children[0]);
 }

@@ -7,14 +7,14 @@
 5. Seguint amb la mateixa pàgina web, escriu una funció Javascript que es permeti canviar el color de la font i el color de fons per el primer i segon paràgraf. Els color s'han de demanar per pantalla.
 6. Amb la mateixa pàgina web, afegeix un títol h1 (per exemple dins del "header"), i després amb Javascript afegir nous h1 abans d'aquest, (el número de títols a afegir es demanarà per pantalla).
 7. Ara crea una una llista (potser ordenada o desordenada) amb tres elements dins del «header». Crear un CSS amb una classe anomenada "mostrar" (que de moment no utilitzaràs), que ha de tenir per exemple, les següents regles:
-    - S'ha de posar a la part més superior de la pàgina.
-    - Tria un color pel seu text.
-    - Tria una font de la lletra diferent a la que ve per defecte, i que tengui una grandaria de 1,5em.
+   - S'ha de posar a la part més superior de la pàgina.
+   - Tria un color pel seu text.
+   - Tria una font de la lletra diferent a la que ve per defecte, i que tengui una grandaria de 1,5em.
 
 Després, afegir una funció js que permeti afegir la classe "mostrar" a la llista. Aquesta funció es cridarà mitjançant l'esdeveniment "onclick" que també es llançarà mitjançant un botó.
 
-8. Dins la mateixa pàgina web, dins d'una "section"afegeix:
-    - un «h1», amb el text: "canviam la imatge",
-    - un paràgraf amb el text: "Si passes el ratolí damunt la imatge, en veuràs una altra"
-    - i una imatge (la que vulguis).
-    - Després amb una funció Javascrip, amb l'esdeveniment «onmouseover», la imatge original ha de ser reemplaçada per una altra, i després amb l'esdeveniment «onmouseout», torni a veure-se la imatge original.
+8. Dins la mateixa pàgina web, dins d'una "section" afegeix:
+   - un «h1», amb el text: "canviam la imatge",
+   - un paràgraf amb el text: "Si passes el ratolí damunt la imatge, en veuràs una altra"
+   - i una imatge (la que vulguis).
+   - Després amb una funció Javascrip, amb l'esdeveniment «onmouseover», la imatge original ha de ser reemplaçada per una altra, i després amb l'esdeveniment «onmouseout», torni a veure-se la imatge original.
