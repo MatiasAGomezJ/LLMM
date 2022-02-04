@@ -1,4 +1,4 @@
-function eraser() {
-    let div = document.getElementById("div");// Nombre del id del div
-    div.removeChild(div.children[0]);
+function cambiador() {
+    sections = document.getElementsByTagName("section");
+    sections[0].className = "format";
 }

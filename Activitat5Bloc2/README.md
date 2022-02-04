@@ -1,4 +1,4 @@
-# Actividad 4 Bloque 2
+# Actividad 5 Bloque 2
 
 1. Crea una funció js que demani els dies de la setmana i les guardi dins d'un array, i després vagi mostrant per pantalla els dies començant per el darrer.
 2. Crea una funció js que permeti calcular equivalències entre euros i dòlars. Per exemple, si l'usuari introdueix una quantitat en euros el programa ha de mostrar l'equivalent en dòlars i a l'inrevés.
