@@ -24,5 +24,4 @@ while (elJuegoSigue) {
 }
 
 var dinero_usuario = prompt("Escribe el dinero que quiere convertir");
-
 document.write(dinero_usuario + " " + moneda1 + " son " + (dinero_usuario * multiplicador).toFixed(2) + " " + moneda2);

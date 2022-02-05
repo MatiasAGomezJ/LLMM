@@ -1,9 +1,9 @@
-function agrandar() {
-    let lacosa = document.getElementById("lacosa")
-    lacosa.style.fontSize = "5em"
-}
-
-function achicar() {
-    let lacosa = document.getElementById("lacosa");
-    lacosa.style.fontSize = "1em";
+if (eleccion_divisa == "€") {
+    moneda1 = eleccion_divisa;
+    moneda2 = "$";
+    multiplicador = 1.15;
+} else if (eleccion_divisa == "$") {
+    moneda1 = eleccion_divisa;
+    moneda2 = "€";
+    multiplicador = 1.15;
 }

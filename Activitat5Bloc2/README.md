@@ -27,4 +27,4 @@ Google, IES Borja Moll, Auditòrium de Palma i al Parc Bit. Després amb una fun
 enllaços a un color que es pot demanar desde un control de formulari.
 
 6. Crea una funció js que demani 5 noms (des d'un formulari de la pàgina web), les guardi dins d’un array, per després afegir cadascun d’aquest noms a la pàgina web en forma de llista ordenada. Aquesta llista ha d'anar dins de l’element main de la pagina.
-7. Crea un formulari que demani dues cadenes de text (utilitzant dos controls independents). Després crea una funció js que concateni aquestes dues cadenes i les escrigui a la pàgina web a la part del `<footer>` de la pàgina. Una vegada afegida la nova cadena concatenada, afegeix una classe (amb les propietats que vulguis) al footer per canviar el seu estil.
+7. Crea un formulari que demani dues cadenes de text (utilitzant dos controls independents. Després crea una funció js que concateni aquestes dues cadenes i les escrigui a la pàgina web a la part del `<footer>` de la pàgina. Una vegada afegida la nova cadena concatenada, afegeix una classe (amb les propietats que vulguis) al footer per canviar el seu estil.
