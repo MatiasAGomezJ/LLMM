@@ -1,6 +1,5 @@
 function calcDescuento() {
     let formulario = document.getElementById("formularioDescuento");
-
     let marcaCoche = formulario.marca.value;
     let precio = formulario.precio.value;
 
