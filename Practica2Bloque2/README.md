@@ -60,3 +60,8 @@ Codi html
         
         Basquet:
         - Pere, 19 anys, color camiseta verda i blanca, 14/09/2018
+
+
+        :sparkles:
+        
+        ✨
