@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Apartado 9</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Els nostres usuaris són esportistes</h1>
+        </header>
+        <main>
+            <form id="formDeportistas">
+                <fieldset>
+                    <legend>Informació personal</legend>
+                    <label for="nombre">Nom: </label>
+                    <input type="text" id="nombre" name="nombre" />
+                    <br />
+                    <label for="edad">Edat: </label>
+                    <input type="text" id="edad" name="edad" />
+                </fieldset>
+                <fieldset>
+                    <legend>Esport</legend>
+                    <label for="deporte"
+                        >Indica el esport que practiques:
+                    </label>
+                    <select name="deporte" id="deporte">
+                        <option value="Futbol">Futbol</option>
+                        <option value="Tenis">Tenis</option>
+                        <option value="Judo">Judo</option>
+                        <option value="Escacs">Escacs</option>
+                        <option value="Basquet">Basquet</option>
+                        <option value="Atletisme">Atletisme</option>
+                    </select>
+                    <br /><label for="colorCamiseta">Indica el color de la camiseta del teu club: </label>
+                    <input type="text" id="colorCamiseta" name="colorCamiseta" />
+                    <br />
+                    <label for="añoComienzoDeporte"
+                        >Indica des de cuan practiques l'esport:
+                    </label>
+                    <input type="date" id="añoComienzoDeporte" name="añoComienzoDeporte" />
+                </fieldset>
+                <input type="reset" value="Borra la informació" />
+                <input
+                    type="button"
+                    id="boton"
+                    name="boton"
+                    value="Guardar dades"
+                    onclick="guardarDatos()"
+                />
+            </form>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
