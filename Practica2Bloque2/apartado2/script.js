@@ -21,6 +21,9 @@ function calcDescuento() {
             descuento -= 0.0;
             break;
     }
+
+    alert("El descuento será de un " + Math.round((1 - descuento) * 100) + "%");
+
     let precioFinal = precio * descuento;
     
     alert("El precio final del coche es " + precioFinal + " €");
