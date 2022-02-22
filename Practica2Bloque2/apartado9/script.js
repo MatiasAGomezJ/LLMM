@@ -14,12 +14,12 @@ function crearUsuario() {
     for (const item of datosAGuardar) {
         if (formulario[item].value == "") {
             alert("Introduce informacion en todos los cuadros de texto y fecha");
-            // Aqui va algo para parar el script
+            // ! Aqui va algo para parar el script
+        } else {
+            usuario[item] = formulario[item].value;
+            console.log(usuario);
         }
-        usuario[item] = formulario[item].value;
-        console.log(usuario);
     }
-
     return usuario;
 }
 
