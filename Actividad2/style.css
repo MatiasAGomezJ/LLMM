@@ -1,0 +1,18 @@
+body {
+   margin: 25px;     
+}
+
+h1,h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+    color: red;
+}
+
+h2, .italica {
+    font-style: italic;
+}
+
+.negrita { 
+    font-weight: bold;
+}

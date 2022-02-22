@@ -1,0 +1,35 @@
+* {
+  color: #003300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 25px;
+  background-color: #99ff99;
+}
+
+header {
+  background-color: #33cc33;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  padding: 10px;
+  text-decoration: none;
+  background-color: #66ff66;
+}
+
+a:hover {
+  background-color: #003300;
+  color: #99ff99;
+}

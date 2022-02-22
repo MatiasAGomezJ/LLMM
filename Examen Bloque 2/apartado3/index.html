@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Apartado 3</title>
+    </head>
+    <body>
+        <h2>Participants de l'enquesta</h2>
+        <form id="formularioDescuento">
+            <fieldset>
+                <legend>Informació personal</legend>
+                <label for="nom">Nom: </label>
+                <input type="text" id="nom" name="nom" />
+            </fieldset>
+            <fieldset>
+                <legend>Estudis</legend>
+                <label for="estudis">Indica els teus estudis: </label>
+                <input type="text" id="estudis" name="estudis" />
+                <br />
+                <label for="anyEstudis">Indica cuan vas començar els teus estudis: </label>
+                <input type="date" id="anyEstudis" name="anyEstudis" />
+            </fieldset>
+            <fieldset>
+                <legend>Hobbies</legend>
+                <span>Selecciona els teus hobbies: </span><br />
+                <input type="checkbox" id="llegir" value="llegir" />
+                <label for="llegir">Llegir</label><br />
+                <input
+                    type="checkbox"
+                    id="jugarVideojocs"
+                    value="jugarVideojocs"
+                />
+                <label for="jugarVideojocs">Jugar videojocs</label><br />
+                <input type="checkbox" id="esport" value="esport" />
+                <label for="esport">Jugar un esport</label><br />
+                <input type="checkbox" id="dibuixar" value="dibuixar" />
+                <label for="dibuixar">Dibuixar</label><br />
+                <label for="boton"></label>
+            </fieldset>
+            <br />
+            <input type="reset" value="Borra la informació" />
+            <input
+                type="button"
+                id="boton"
+                name="boton"
+                value="Guardar dades"
+                onclick="guardarDatos()"
+            />
+        </form>
+        <br />
+        <button onclick="mostrarParticipantes()">Mostrar participants</button>
+        <script src="./script.js"></script>
+    </body>
+</html>
