@@ -2,9 +2,10 @@ function validacio() {
     let formulario = document.getElementById("formulario");
 
     try {
-        // checkNombre();
-        // checkCorreo();
-        checkTel();
+        checkNombre();
+        checkCorreo();
+        checkTelefono();
+        checkContraseña();
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
     }
@@ -12,8 +13,6 @@ function validacio() {
 
 function checkNombre() {
     let input = formulario.nombre;
-    // ! Borrar
-    input.value = "Matias";
 
     // Esto no deberia nunca dar error ya que en el ...
     // ... formulario tiene el atributo required. Por ...
@@ -23,20 +22,18 @@ function checkNombre() {
 
 function checkCorreo() {
     let input = formulario.correo;
-    // ! Borrar
-    input.value = "gmail@gmail.com";
-
+    
     checkIfVacio(input);
 
-    if (!/^\w+@+\w+\.+[a-zA-Z]{2,4}$/.test(input.value)) {
-        throw "L'adreça de correu no és vàlida";
+    let regEx = /^\w+@+\w+\.+[a-zA-Z]{2,4}$/;
+
+    if (!regEx.test(input.value)) {
+        throw "La direccion del correo no és vàlida";
     }
 }
 
-function checkTel() {
+function checkTelefono() {
     let input = formulario.telefono;
-    // ! Borrar
-    input.value = "971456289";
 
     // Esto no deberia nunca dar error ya que en el ...
     // ... formulario tiene el atributo required. Por ...
@@ -52,8 +49,28 @@ function checkTel() {
     }
 }
 
+function checkContraseña() {
+    let input = formulario.contraseña;
+
+    let regEx = /^\w+[0-9]{2}$/;
+
+    checkIfVacio(input);
+
+    if (input.value.length < 6) {
+        throw "La contraseña tiene que tener mínimo 6 carácteres";
+    }
+
+    if (input.value.length > 10) {
+        throw "La contraseña tiene que tener máximo 10 carácteres";
+    }
+
+    if (!regEx.test(input.value)) {
+        throw "La contraseña no es valida";
+    }
+}
+
 function checkIfVacio(cajaTexto) {
     if (cajaTexto.value == null || cajaTexto.value.length == 0) {
-        throw "El " + cajaTexto.name + " esta vacio";
+        throw 'La caja "' + cajaTexto.name + '" esta vacia';
     }
 }
