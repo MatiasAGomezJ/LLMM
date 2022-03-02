@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Apartado 3</title>
-        <link rel="stylesheet" href="../../Activitat5Bloc2/BASE/style.css" />
+        <link rel="stylesheet" href="../BASE/style.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -13,16 +13,16 @@
         <form id="formulario" onsubmit="validacio()">
             <fieldset>
                 <legend>Informació personal</legend>
-                <label for="nombre">Nom: </label>
+                <label for="nombre">Nombre: </label>
                 <input type="text" id="nombre" name="nombre" required autofocus />
                 <br />
                 <label for="telefono">Telefono: </label>
-                <input type="tel" id="telefono" name="telefono" required />
+                <input type="tel" id="telefono" name="telefono" />
             </fieldset>
             <fieldset>
-                <legend>Informacion cuenta:</legend>
+                <legend>Informacion cuenta</legend>
                 <label for="correo">Coreo electronico: </label>
-                <input type="email" id="correo" name="correo" />
+                <input type="email" id="correo" name="correo" required />
                 <br />
                 <label for="contraseña">Contraseña: </label>
                 <input type="password" id="contraseña" name="contraseña" />
@@ -31,7 +31,10 @@
             <input type="submit" value="Enviar" />
         </form>
 
+        <!-- ! BORRAR -->
         <button onclick="validacio()">Validacio</button>
+        <!-- ! -->
+
         <script src="./script.js"></script>
     </body>
 </html>

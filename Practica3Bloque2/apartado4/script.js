@@ -2,28 +2,25 @@ function validacio() {
     let formulario = document.getElementById("formulario");
 
     try {
-        checkNombre();
+        // Nada que comprobar del nombre
         checkCorreo();
         checkTelefono();
         checkContraseña();
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
     }
-}
 
-function checkNombre() {
-    let input = formulario.nombre;
+    texto = "Informacion" + "\nNom: " + formulario.nombre.value + "\nCorreo electronico: " + formulario.correo.value;
 
-    // Esto no deberia nunca dar error ya que en el ...
-    // ... formulario tiene el atributo required. Por ...
-    // ... lo tanto jamas deberia estar vacio.
-    checkIfVacio(input);
+    if (formulario.telefono.value != "") {
+        texto += "\nTelefono: " + formulario.telefono.value;
+    }
+
+    alert(texto);
 }
 
 function checkCorreo() {
     let input = formulario.correo;
-    
-    checkIfVacio(input);
 
     let regEx = /^\w+@+\w+\.+[a-zA-Z]{2,4}$/;
 
@@ -35,10 +32,8 @@ function checkCorreo() {
 function checkTelefono() {
     let input = formulario.telefono;
 
-    // Esto no deberia nunca dar error ya que en el ...
-    // ... formulario tiene el atributo required. Por ...
-    // ... lo tanto jamas deberia estar vacio.
-    checkIfVacio(input);
+    // Si el input está vacio para la funcion
+    if (input.value == "") return;
 
     if (isNaN(Number(input.value))) {
         throw "El numero de teléfono solo debe tener caracteres numéricos";
@@ -52,9 +47,8 @@ function checkTelefono() {
 function checkContraseña() {
     let input = formulario.contraseña;
 
-    let regEx = /^\w+[0-9]{2}$/;
-
-    checkIfVacio(input);
+    // Si el input está vacio para la funcion
+    if (input) return;
 
     if (input.value.length < 6) {
         throw "La contraseña tiene que tener mínimo 6 carácteres";
@@ -64,13 +58,9 @@ function checkContraseña() {
         throw "La contraseña tiene que tener máximo 10 carácteres";
     }
 
+    let regEx = /^\w+[0-9]{2}$/;
+
     if (!regEx.test(input.value)) {
         throw "La contraseña no es valida";
-    }
-}
-
-function checkIfVacio(cajaTexto) {
-    if (cajaTexto.value == null || cajaTexto.value.length == 0) {
-        throw 'La caja "' + cajaTexto.name + '" esta vacia';
     }
 }
