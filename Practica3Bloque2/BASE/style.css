@@ -3,9 +3,14 @@ body {
     color: white;
     font-family: "Dongle", sans-serif;
     margin: 25px;
+    width: fit-content;
 }
 
 button{
     background-color: rgb(56, 56, 56);
     color: white;
+}
+
+fieldset > *, input  {
+    margin: 5px;
 }
