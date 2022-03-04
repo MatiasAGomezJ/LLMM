@@ -20,7 +20,9 @@ function checkNombre(form) {
 
     regEx = /^[A-Z]{1}\w+$/;
 
-    if (valor == "") return;
+    if (valor == "") {
+        throw "El nombre no puede estar vacio";
+    }
 
     if (valor.length > 10) {
         throw "La nombre tiene que tener máximo 10 carácteres";
@@ -46,11 +48,15 @@ function checkTelefono(form) {
 }
 
 function checkCorreo(form) {
-    let valorCorreo = form.correo.value;
+    let valor = form.correo.value;
+
+    if (valor == "") {
+        throw "El correo no puede estar vacio";
+    }
 
     let regEx = /^\w+@domini\.[a-zA-Z]{2,4}$/;
 
-    if (!regEx.test(valorCorreo)) {
+    if (!regEx.test(valor)) {
         throw "La direccion del correo no és vàlida.\nPatron => nomsuario@domini.xxx\n\tnomusuario: tu nombre de usuario\n\t@domini: exactamente igual\n\txxx: puedes ser 2,3 o 4 letras";
     }
 }
@@ -58,7 +64,9 @@ function checkCorreo(form) {
 function checkNumTarjeta(form) {
     let valor = form.numTarjeta.value;
 
-    if (valor == "") return;
+    if (valor == "") {
+        throw "El numero de la tarjeta de credito no puede estar vacio";
+    }
 
     regEx = /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/;
 
