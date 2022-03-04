@@ -18,47 +18,47 @@ function validacio() {
 }
 
 function checkCorreo() {
-    let valorCorreo = formulario.correo.value;
+    let valor = formulario.correo.value;
 
     let regEx = /^\w+@\w+\.[a-zA-Z]{2,4}$/;
 
-    if (!regEx.test(valorCorreo)) {
+    if (!regEx.test(valor)) {
         throw "La direccion del correo no és vàlida";
     }
 }
 
 function checkTelefono() {
-    let valorTel = formulario.telefono.value;
+    let valor = formulario.telefono.value;
 
     // Si el input está vacio para la funcion
-    if (valorTel == "") return;
+    if (valor == "") return;
 
-    if (isNaN(Number(valorTel))) {
+    if (isNaN(Number(valor))) {
         throw "El numero de teléfono solo debe tener caracteres numéricos";
     }
 
-    if (valorTel.length != 9) {
+    if (valor.length != 9) {
         throw "El numero de telefono tiene que tener exactamente 9 digitos";
     }
 }
 
 function checkContraseña() {
-    let valorContra = formulario.contraseña.value;
+    let valor = formulario.contraseña.value;
 
     // Si el input está vacio para la funcion
-    if (valorContra == "") return;
+    if (valor == "") return;
 
-    if (valorContra.length < 6) {
+    if (valor.length < 6) {
         throw "La contraseña tiene que tener mínimo 6 carácteres";
     }
 
-    if (valorContra.length > 10) {
+    if (valor.length > 10) {
         throw "La contraseña tiene que tener máximo 10 carácteres";
     }
 
     let regEx = /^\w+[0-9]{2}$/;
 
-    if (!regEx.test(valorContra)) {
+    if (!regEx.test(valor)) {
         throw "La contraseña no es valida";
     }
 }
