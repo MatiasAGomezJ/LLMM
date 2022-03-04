@@ -6,11 +6,11 @@ body {
     width: fit-content;
 }
 
-button{
-    background-color: rgb(56, 56, 56);
-    color: white;
-}
-
-fieldset > *, input  {
+fieldset, fieldset > *, input  {
     margin: 5px;
+} 
+
+label {
+    display: inline-block;
+    min-width: 150px;
 }

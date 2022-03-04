@@ -20,12 +20,15 @@ function validacio() {
 function checkNombre() {
     let valor = formulario.nombre.value;
 
-    
+    regEx = /^[A-Z]{1}\w+$/;
 
     if (valor.length > 10) {
         throw "La nombre tiene que tener máximo 10 carácteres";
     }
 
+    if (!regEx.test(valor)) {
+        throw "El nombre no es válido";
+    }
 }
 
 // function checkCorreo() {
@@ -73,11 +76,4 @@ function checkNombre() {
 //         throw "La contraseña no es valida";
 //     }
 // }
-
-regEx = /^[A-Z]+\w$/;
-p1 = "Mariano"
-p2 = "mariano";
-p3 = "MARIANO";
-console.log(regEx.test(p1));
-console.log(regEx.test(p2));
-console.log(regEx.test(p3));
+console.log(`${ps[i]}: ${regEx.test(ps[i])}`);

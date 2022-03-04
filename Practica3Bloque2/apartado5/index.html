@@ -6,31 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Apartado 5</title>
         <link rel="stylesheet" href="../BASE/style.css" />
-        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>Verificacion de formularios</h1>
         <form id="formulario" onsubmit="validacio()">
             <fieldset>
                 <legend>Informació personal</legend>
-                <label for="nombre">Nombre: </label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" />
                 <br />
-                <label for="telefono">Telefono: </label>
+                <label for="telefono">Telefono:</label>
                 <input type="tel" id="telefono" name="telefono" />
             </fieldset>
             <fieldset>
                 <legend>Informacion cuenta</legend>
-                <label for="correo">Coreo electronico: </label>
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required />
+                <br />
+                <label for="correo">Coreo electronico:</label>
                 <input type="email" id="correo" name="correo" required />
                 <br />
-                <label for  ="contraseña">Contraseña: </label>
-                <input type="password" id="contraseña" name="contraseña" />
+                <label for="numTarjeta">Nº tarjeta de crédito:</label>
+                <input type="text" id="numTarjeta" name="numTarjeta" />
             </fieldset>
             <input type="reset" value="Borra la informació" />
             <input type="submit" value="Enviar" />
         </form>
-
         <script src="./script.js"></script>
     </body>
 </html>

@@ -20,7 +20,7 @@ function validacio() {
 function checkCorreo() {
     let valorCorreo = formulario.correo.value;
 
-    let regEx = /^\w+@+\w+\.+[a-zA-Z]{2,4}$/;
+    let regEx = /^\w+@\w+\.[a-zA-Z]{2,4}$/;
 
     if (!regEx.test(valorCorreo)) {
         throw "La direccion del correo no és vàlida";
