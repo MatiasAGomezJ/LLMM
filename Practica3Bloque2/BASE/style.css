@@ -12,5 +12,5 @@ fieldset, fieldset > *, input  {
 
 label {
     display: inline-block;
-    min-width: 150px;
+    min-width: 175px;
 }

@@ -3,28 +3,28 @@ function validacio() {
 
     try {
         // Nada que comprobar del nombre
-        checkCorreo();
-        checkTelefono();
-        checkContraseña();
+        checkCorreo(form);
+        checkTelefono(form);
+        checkContraseña(form);
 
-        texto = datosUsuario();
+        texto = datosUsuario(form);
         alert(texto);
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
     }
 }
 
-function checkCorreo() {
+function checkCorreo(form) {
     let valor = form.correo.value;
 
     let regEx = /^\w+@\w+\.[a-zA-Z]{2,4}$/;
 
     if (!regEx.test(valor)) {
-        throw "La direccion del correo no és vàlida";
+        throw "La direccion del correo no és vàlida.\nPatrón => nom@dom.com\n\tnom: tu nombre de usuario\n\t@dom: el dominio que utilices\n\tcom: puedes ser 2, 3 o 4 letras";
     }
 }
 
-function checkTelefono() {
+function checkTelefono(form) {
     let valor = form.telefono.value;
 
     // Si el input está vacio para la funcion
@@ -39,7 +39,7 @@ function checkTelefono() {
     }
 }
 
-function checkContraseña() {
+function checkContraseña(form) {
     let valor = form.contraseña.value;
 
     if (valor.length < 6) {
@@ -57,7 +57,7 @@ function checkContraseña() {
     }
 }
 
-function datosUsuario() {
+function datosUsuario(form) {
     let datos = {};
     datos.Nombre = form.nombre.value;
     datos.Telefono = form.telefono.value;

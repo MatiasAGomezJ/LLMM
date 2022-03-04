@@ -2,20 +2,20 @@ function validacio() {
     let form = document.getElementById("formulario");
 
     try {
-        checkNombre();
-        checkTelefono();
-        // checkCorreo();
+        checkNombre(form);
+        checkTelefono(form);
+        checkCorreo(form);
         // La ciudad y el pais no tienen nada que haya que comprobar
-        checkNumTarjeta();
+        checkNumTarjeta(form);
 
-        let texto = datosUsuario();
+        let texto = datosUsuario(form);
         alert(texto);
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
     }
 }
 
-function checkNombre() {
+function checkNombre(form) {
     let valor = form.nombre.value;
 
     regEx = /^[A-Z]{1}\w+$/;
@@ -31,7 +31,7 @@ function checkNombre() {
     }
 }
 
-function checkTelefono() {
+function checkTelefono(form) {
     let valor = form.telefono.value;
 
     if (valor == "") return;
@@ -45,17 +45,17 @@ function checkTelefono() {
     }
 }
 
-// function checkCorreo() {
-//     let valorCorreo = formulario.correo.value;
+function checkCorreo(form) {
+    let valorCorreo = form.correo.value;
 
-//     let regEx = /^\w+@+\w+\.+[a-zA-Z]{2,4}$/;
+    let regEx = /^\w+@domini\.[a-zA-Z]{2,4}$/;
 
-//     if (!regEx.test(valorCorreo)) {
-//         throw "La direccion del correo no és vàlida";
-//     }
-// }
+    if (!regEx.test(valorCorreo)) {
+        throw "La direccion del correo no és vàlida.\nPatron => nomsuario@domini.xxx\n\tnomusuario: tu nombre de usuario\n\t@domini: exactamente igual\n\txxx: puedes ser 2,3 o 4 letras";
+    }
+}
 
-function checkNumTarjeta() {
+function checkNumTarjeta(form) {
     let valor = form.numTarjeta.value;
 
     if (valor == "") return;
@@ -67,7 +67,7 @@ function checkNumTarjeta() {
     }
 }
 
-function datosUsuario() {
+function datosUsuario(form) {
     let datos = {};
     datos.Nombre = form.nombre.value;
     datos.Telefono = form.telefono.value;
