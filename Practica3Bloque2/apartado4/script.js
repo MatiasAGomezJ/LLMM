@@ -1,4 +1,6 @@
 function validacio() {
+    let form = document.getElementById("formulario");
+
     try {
         // Nada que comprobar del nombre
         checkCorreo();
@@ -13,7 +15,7 @@ function validacio() {
 }
 
 function checkCorreo() {
-    let valor = formulario.correo.value;
+    let valor = form.correo.value;
 
     let regEx = /^\w+@\w+\.[a-zA-Z]{2,4}$/;
 
@@ -23,7 +25,7 @@ function checkCorreo() {
 }
 
 function checkTelefono() {
-    let valor = formulario.telefono.value;
+    let valor = form.telefono.value;
 
     // Si el input está vacio para la funcion
     if (valor == "") return;
@@ -38,7 +40,7 @@ function checkTelefono() {
 }
 
 function checkContraseña() {
-    let valor = formulario.contraseña.value;
+    let valor = form.contraseña.value;
 
     if (valor.length < 6) {
         throw "La contraseña tiene que tener mínimo 6 carácteres";
@@ -57,10 +59,10 @@ function checkContraseña() {
 
 function datosUsuario() {
     let datos = {};
-    datos.Nombre = formulario.nombre.value;
-    datos.Telefono = formulario.telefono.value;
-    datos.Correo = formulario.correo.value;
-    datos.Contraseña = formulario.contraseña.value;
+    datos.Nombre = form.nombre.value;
+    datos.Telefono = form.telefono.value;
+    datos.Correo = form.correo.value;
+    datos.Contraseña = form.contraseña.value;
 
     texto = "";
     for (const dato in datos) {

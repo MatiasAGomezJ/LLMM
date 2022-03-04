@@ -1,4 +1,5 @@
 function validacio() {
+    let form = document.getElementById("formulario");
 
     try {
         checkNombre();
@@ -15,7 +16,7 @@ function validacio() {
 }
 
 function checkNombre() {
-    let valor = formulario.nombre.value;
+    let valor = form.nombre.value;
 
     regEx = /^[A-Z]{1}\w+$/;
 
@@ -31,7 +32,7 @@ function checkNombre() {
 }
 
 function checkTelefono() {
-    let valor = formulario.telefono.value;
+    let valor = form.telefono.value;
 
     if (valor == "") return;
 
@@ -55,7 +56,7 @@ function checkTelefono() {
 // }
 
 function checkNumTarjeta() {
-    let valor = formulario.numTarjeta.value;
+    let valor = form.numTarjeta.value;
 
     if (valor == "") return;
 
@@ -68,12 +69,12 @@ function checkNumTarjeta() {
 
 function datosUsuario() {
     let datos = {};
-    datos.Nombre = formulario.nombre.value;
-    datos.Telefono = formulario.telefono.value;
-    datos.Ciudad = formulario.ciudad.value;
-    datos.Pais = formulario.pais.value;
-    datos.Correo = formulario.correo.value;
-    datos.NumTarjeta = formulario.numTarjeta.value;
+    datos.Nombre = form.nombre.value;
+    datos.Telefono = form.telefono.value;
+    datos.Ciudad = form.ciudad.value;
+    datos.Pais = form.pais.value;
+    datos.Correo = form.correo.value;
+    datos.NumTarjeta = form.numTarjeta.value;
 
     texto = "";
     for (const dato in datos) {
