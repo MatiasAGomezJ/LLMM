@@ -3,15 +3,23 @@ function validacio() {
 
     try {
         checkNombre();
+        checkTelefono();
         // checkCorreo();
-        // checkTelefono();
-        // checkContraseña();
+        // La ciudad y el pais no tienen nada que haya que comprobar
+        checkNumTarjeta();
 
         // texto = "Informacion" + "\nNom: " + formulario.nombre.value + "\nCorreo electronico: " + formulario.correo.value;
         // if (formulario.telefono.value != "") {
         //     texto += "\nTelefono: " + formulario.telefono.value;
         // }
-        alert(texto);
+        // alert(texto);
+        console.log(formulario.nombre.value);
+        console.log(formulario.telefono.value);
+        console.log(formulario.ciudad.value);
+        console.log(formulario.pais.value);
+        console.log(formulario.correo.value);
+        console.log(formulario.numTarjeta.value);
+        alert("stop");
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
     }
@@ -22,12 +30,28 @@ function checkNombre() {
 
     regEx = /^[A-Z]{1}\w+$/;
 
+    if (valor == "") return;
+
     if (valor.length > 10) {
         throw "La nombre tiene que tener máximo 10 carácteres";
     }
 
     if (!regEx.test(valor)) {
-        throw "El nombre no es válido";
+        throw "El nombre no es válido, tiene que comenzar con 1 mayuscula";
+    }
+}
+
+function checkTelefono() {
+    let valor = formulario.telefono.value;
+
+    if (valor == "") return;
+
+    if (isNaN(Number(valor))) {
+        throw "El numero de teléfono solo debe tener caracteres numéricos";
+    }
+
+    if (valor.length != 9) {
+        throw "El numero de telefono tiene que tener exactamente 9 digitos";
     }
 }
 
@@ -41,39 +65,27 @@ function checkNombre() {
 //     }
 // }
 
-// function checkTelefono() {
-//     let valorTel = formulario.telefono.value;
+function checkNumTarjeta() {
+    let valor = formulario.numTarjeta.value;
 
-//     // Si el input está vacio para la funcion
-//     if (valorTel == "") return;
+    if (valor == "") return;
 
-//     if (isNaN(Number(valorTel))) {
-//         throw "El numero de teléfono solo debe tener caracteres numéricos";
-//     }
+    regEx = /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/;
 
-//     if (valorTel.length != 9) {
-//         throw "El numero de telefono tiene que tener exactamente 9 digitos";
-//     }
-// }
+    if (!regEx.test(valor)) {
+        throw "El numero de la tarjeta de credito no es válido, tiene que seguir el siguiente patrón\nPatrón => '1234-1234-1234-1234'";
+    }
+}
 
-// function checkContraseña() {
-//     let valorContra = formulario.contraseña.value;
+añadirInformacion();
 
-//     // Si el input está vacio para la funcion
-//     if (valorContra == "") return;
-
-//     if (valorContra.length < 6) {
-//         throw "La contraseña tiene que tener mínimo 6 carácteres";
-//     }
-
-//     if (valorContra.length > 10) {
-//         throw "La contraseña tiene que tener máximo 10 carácteres";
-//     }
-
-//     let regEx = /^\w+[0-9]{2}$/;
-
-//     if (!regEx.test(valorContra)) {
-//         throw "La contraseña no es valida";
-//     }
-// }
-console.log(`${ps[i]}: ${regEx.test(ps[i])}`);
+function añadirInformacion() {
+    let formulario = document.getElementById("formulario");
+    
+    formulario.nombre.value = "Jaime"
+    formulario.telefono.value = "123456789"
+    formulario.ciudad.value = "Ja"
+    formulario.pais.value = "Ime"
+    formulario.correo.value = "jaime@jaime.jaime"
+    formulario.numTarjeta.value = "1234-1234-1234-1234"
+}
