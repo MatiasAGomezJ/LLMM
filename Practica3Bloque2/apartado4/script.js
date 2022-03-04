@@ -2,7 +2,7 @@ function validacio() {
     let form = document.getElementById("formulario");
 
     try {
-        // Nada que comprobar del nombre
+        checkNombre(form);
         checkCorreo(form);
         checkTelefono(form);
         checkContraseña(form);
@@ -14,8 +14,20 @@ function validacio() {
     }
 }
 
+function checkNombre(form) {
+    let valor = form.nombre.value;
+
+    if (valor == "") {
+        throw "El nombre no puede estar vacio";
+    }
+}
+
 function checkCorreo(form) {
     let valor = form.correo.value;
+
+    if (valor == "") {
+        throw "El correo no puede estar vacio";
+    }
 
     let regEx = /^\w+@\w+\.[a-zA-Z]{2,4}$/;
 
@@ -41,6 +53,10 @@ function checkTelefono(form) {
 
 function checkContraseña(form) {
     let valor = form.contraseña.value;
+
+    if (valor == "") {
+        throw "La contraseña no puede estar vacia";
+    }
 
     if (valor.length < 6) {
         throw "La contraseña tiene que tener mínimo 6 carácteres";
