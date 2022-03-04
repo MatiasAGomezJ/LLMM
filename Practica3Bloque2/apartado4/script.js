@@ -1,16 +1,11 @@
 function validacio() {
-    let formulario = document.getElementById("formulario");
-
     try {
         // Nada que comprobar del nombre
         checkCorreo();
         checkTelefono();
         checkContraseña();
 
-        texto = "Informacion" + "\nNom: " + formulario.nombre.value + "\nCorreo electronico: " + formulario.correo.value;
-        if (formulario.telefono.value != "") {
-            texto += "\nTelefono: " + formulario.telefono.value;
-        }
+        texto = datosUsuario();
         alert(texto);
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
@@ -45,9 +40,6 @@ function checkTelefono() {
 function checkContraseña() {
     let valor = formulario.contraseña.value;
 
-    // Si el input está vacio para la funcion
-    if (valor == "") return;
-
     if (valor.length < 6) {
         throw "La contraseña tiene que tener mínimo 6 carácteres";
     }
@@ -61,4 +53,21 @@ function checkContraseña() {
     if (!regEx.test(valor)) {
         throw "La contraseña no es valida";
     }
+}
+
+function datosUsuario() {
+    let datos = {};
+    datos.Nombre = formulario.nombre.value;
+    datos.Telefono = formulario.telefono.value;
+    datos.Correo = formulario.correo.value;
+    datos.Contraseña = formulario.contraseña.value;
+
+    texto = "";
+    for (const dato in datos) {
+        if (datos[dato] != "") {
+            texto += `${dato}: ${datos[dato]}\n`;
+        }
+    }
+
+    return texto;
 }

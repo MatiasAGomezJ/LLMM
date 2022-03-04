@@ -1,5 +1,4 @@
 function validacio() {
-    let formulario = document.getElementById("formulario");
 
     try {
         checkNombre();
@@ -8,18 +7,8 @@ function validacio() {
         // La ciudad y el pais no tienen nada que haya que comprobar
         checkNumTarjeta();
 
-        // texto = "Informacion" + "\nNom: " + formulario.nombre.value + "\nCorreo electronico: " + formulario.correo.value;
-        // if (formulario.telefono.value != "") {
-        //     texto += "\nTelefono: " + formulario.telefono.value;
-        // }
-        // alert(texto);
-        console.log(formulario.nombre.value);
-        console.log(formulario.telefono.value);
-        console.log(formulario.ciudad.value);
-        console.log(formulario.pais.value);
-        console.log(formulario.correo.value);
-        console.log(formulario.numTarjeta.value);
-        alert("stop");
+        let texto = datosUsuario();
+        alert(texto);
     } catch (error) {
         alert("Ha habido un error.\n" + error + ".");
     }
@@ -77,15 +66,21 @@ function checkNumTarjeta() {
     }
 }
 
-añadirInformacion();
+function datosUsuario() {
+    let datos = {};
+    datos.Nombre = formulario.nombre.value;
+    datos.Telefono = formulario.telefono.value;
+    datos.Ciudad = formulario.ciudad.value;
+    datos.Pais = formulario.pais.value;
+    datos.Correo = formulario.correo.value;
+    datos.NumTarjeta = formulario.numTarjeta.value;
 
-function añadirInformacion() {
-    let formulario = document.getElementById("formulario");
-    
-    formulario.nombre.value = "Jaime"
-    formulario.telefono.value = "123456789"
-    formulario.ciudad.value = "Ja"
-    formulario.pais.value = "Ime"
-    formulario.correo.value = "jaime@jaime.jaime"
-    formulario.numTarjeta.value = "1234-1234-1234-1234"
+    texto = "";
+    for (const dato in datos) {
+        if (datos[dato] != "") {
+            texto += `${dato}: ${datos[dato]}\n`;
+        }
+    }
+
+    return texto;
 }
