@@ -18,7 +18,7 @@ function validacio() {
 function checkNombre(form) {
     let valor = form.nombre.value;
 
-    regEx = /^[A-Z]{1}\w+$/;
+    let regEx = /^[A-Z]{1}\w+$/;
 
     if (valor == "") {
         throw "El nombre no puede estar vacio.";
@@ -68,7 +68,7 @@ function checkNumTarjeta(form) {
         throw "El numero de la tarjeta de credito no puede estar vacio.";
     }
 
-    regEx = /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/;
+    let regEx = /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/;
 
     if (!regEx.test(valor)) {
         throw "El numero de la tarjeta de credito no es válido, tiene que seguir el siguiente patrón\nPatrón => '1234-1234-1234-1234'.";
@@ -84,7 +84,7 @@ function datosUsuario(form) {
     datos.Correo = form.correo.value;
     datos.NumTarjeta = form.numTarjeta.value;
 
-    texto = "";
+    let texto = "";
     for (const dato in datos) {
         if (datos[dato] != "") {
             texto += `${dato}: ${datos[dato]}\n`;

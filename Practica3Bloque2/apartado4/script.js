@@ -7,7 +7,7 @@ function validacio() {
         checkTelefono(form);
         checkContraseña(form);
 
-        texto = datosUsuario(form);
+        let texto = datosUsuario(form);
         alert(texto);
     } catch (error) {
         alert("Ha habido un error.\n" + error);
@@ -80,7 +80,7 @@ function datosUsuario(form) {
     datos.Correo = form.correo.value;
     datos.Contraseña = form.contraseña.value;
 
-    texto = "";
+    let texto = "";
     for (const dato in datos) {
         if (datos[dato] != "") {
             texto += `${dato}: ${datos[dato]}\n`;
