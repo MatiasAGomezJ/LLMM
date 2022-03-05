@@ -1,5 +1,5 @@
 function demanarAE() {
-    let lletra = prompt("Introdueix una una vocal (només A o B): ");
+    let lletra = prompt("Introdueix una una vocal (només A o E): ");
     try {
         if (lletra.toLowerCase() == "a") {
             alert("Perfecte, has triat la A");
