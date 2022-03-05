@@ -57,7 +57,12 @@ function checkCorreo(form) {
     let regEx = /^\w+@domini\.[a-zA-Z]{2,4}$/;
 
     if (!regEx.test(valor)) {
-        throw new Error("La direccion del correo no és vàlida.\nPatron => nomsuario@domini.xxx\n    nomusuario: cualquier cosa\n    domini: exactamente igual\n    xxx: puedes ser 2,3 o 4 letras.");
+        throw new Error(
+            "La direccion del correo no és vàlida.\n" +
+            "Patron => nomsuario@domini.xxx\n" +
+            "    nomusuario: cualquier cosa\n" +
+            "    domini: exactamente igual\n" +
+            "    xxx: puedes ser 2,3 o 4 letras.");
     }
 }
 
@@ -71,7 +76,9 @@ function checkNumTarjeta(form) {
     let regEx = /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/;
 
     if (!regEx.test(valor)) {
-        throw new Error("El numero de la tarjeta de credito no es válido, tiene que seguir el siguiente patrón\nPatrón => '1234-1234-1234-1234'.");
+        throw new Error(
+            "El numero de la tarjeta de credito no es válido, tiene que seguir el siguiente patrón\n" +
+            "Patrón => '1234-1234-1234-1234'.");
     }
 }
 

@@ -32,7 +32,11 @@ function checkCorreo(form) {
     let regEx = /^\w+@\w+\.[a-zA-Z]{2,4}$/;
 
     if (!regEx.test(valor)) {
-        throw new Error("La direccion del correo no és vàlida.\nPatrón => nom@dom.com\n    nom: cualquier cosa\n    dom: el dominio que utilices\n    com: puedes ser 2, 3 o 4 letras");
+        throw new Error("La direccion del correo no és vàlida." +
+            "\nPatrón => nom@dom.com\n" +
+            "    nom: cualquier cosa\n" +
+            "    dom: el dominio que utilices\n" +
+            "    com: puedes ser 2, 3 o 4 letras");
     }
 }
 
