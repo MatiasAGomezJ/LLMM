@@ -1,17 +1,23 @@
 <events>
     <event descripcio="IMB posa al mercat el PC.">
-        <dia>12</dia>
-        <mes>8</mes>
-        <any>1981</any>
+        <data>
+            <dia>12</dia>
+            <mes>8</mes>
+            <any>1981</any>
+        </data>
     </event>
     <event descripcio="Se funda Google.">
-        <dia>4</dia>
-        <mes>9</mes>
-        <any>1998</any>
+        <data>
+            <dia>4</dia>
+            <mes>9</mes>
+            <any>1998</any>
+        </data>
     </event>
     <event descripcio="Se funda Facebook.">
-        <dia>4</dia>
-        <mes>2</mes>
-        <any>2004</any>
+        <data>
+            <dia>4</dia>
+            <mes>2</mes>
+            <any>2004</any>
+        </data>
     </event>
 </events>
