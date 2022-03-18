@@ -1,3 +1,10 @@
+<!DOCTYPE ciutats [
+    <!ELEMENT ciutats (ciutat*)>
+    <!ELEMENT ciutat (nom,pais)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ATTLIST pais continent NMTOKEN #REQUIRED>
+]>
 <ciutats>
     <ciutat>
         <nom>Nova Delhi</nom>
