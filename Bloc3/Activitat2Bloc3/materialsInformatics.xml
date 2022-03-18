@@ -1,0 +1,48 @@
+<!DOCTYPE materialsInformatics [
+    <!ELEMENT materialsInformatics (material)>
+    <!ELEMENT material (stock, magatzem?, proveidor)>
+    <!ATTLIST material
+        codi CDATA ID
+        descripcio CDATA #REQUIRED
+    >
+    <!ELEMENT stock (#PCDATA)>
+    <!ELEMENT magatzem (#PCDATA)>
+    <!ELEMENT proveidor (nom, adreça_postal, adreça_electronica, telefon?)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT adreça_postal (#PCDATA)>
+    <!ELEMENT adreça_electronica (#PCDATA)>
+    <!ELEMENT telefon (#PCDATA)>
+]>
+
+<materialsInformatics>
+    <material codi="1" descripcio="Descriopion 1">
+        <stock>315</stock>
+        <magatzem>Nº51Eº62</magatzem>
+        <proveidor>
+            <nom>Pep</nom>
+            <adreça_postal>34505</adreça_postal>
+            <adreça_electronica>pep@gmail.com</adreça_electronica>
+            <telefon>974351647</telefon>
+        </proveidor>
+    </material>
+    <material codi="2" descripcio="Descriopion 2">
+        <stock>836</stock>
+        <magatzem>Nº23Oº87</magatzem>
+        <proveidor>
+            <nom>Joan</nom>
+            <adreça_postal>45768</adreça_postal>
+            <adreça_electronica>joan@gmail.com</adreça_electronica>
+            <telefon>453247623</telefon>
+        </proveidor>
+    </material>
+    <material codi="3" descripcio="Descriopion 3">
+        <stock>7863</stock>
+        <magatzem>Sº12Eº45</magatzem>
+        <proveidor>
+            <nom>Miquel</nom>
+            <adreça_postal>34572</adreça_postal>
+            <adreça_electronica>miquel@gmail.com</adreça_electronica>
+            <telefon>912389821</telefon>
+        </proveidor>
+    </material>
+</materialsInformatics>

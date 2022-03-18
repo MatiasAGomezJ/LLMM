@@ -1,17 +1,3 @@
-<!DOCTYPE ticket [
-    <!ELEMENT ticket (data,hora,preu_total,pagament)>
-    <!ATTLIST ticket codi NMTOKEN #REQUIRED>
-    <!ELEMENT data (#PCDATA)>
-    <!ELEMENT hora (#PCDATA)>
-    <!ELEMENT preu_total (preu_sin_IVA,IVA,preu_con_IVA)>
-    <!ELEMENT preu_sin_IVA (#PCDATA)>
-    <!ELEMENT IVA (#PCDATA)>
-    <!ELEMENT preu_con_IVA (#PCDATA)>
-    <!ELEMENT pagament (tipus_pagament,num_targeta,nom_client)>
-    <!ELEMENT tipus_pagament (#PCDATA)>
-    <!ELEMENT num_targeta EMPTY>
-    <!ELEMENT nom_client (#PCDATA)>
-]>
 <ticket codi="45668712">
     <data>22/22/2022</data>
     <hora>22:22</hora>

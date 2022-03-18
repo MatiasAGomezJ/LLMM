@@ -1,0 +1,18 @@
+<!DOCTYPE missatges [
+    <!ELEMENT missatges (missatge)>
+    <!ELEMENT missatge (telefon, data, hora, titol_missatge, cos_missatge)>
+    <!ELEMENT telefon (#PCDATA)>
+    <!ELEMENT data (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT titol_missatge (#PCDATA)>
+    <!ELEMENT cos_missatge (#PCDATA)>
+]>
+<missatges>
+    <missatge>
+        <telefon>987512143</telefon>
+        <data>12/32/1564</data>
+        <hora>12:45</hora>
+        <titol_missatge>Problema</titol_missatge>
+        <cos_missatge>No se que escribir</cos_missatge>
+    </missatge>
+</missatges>

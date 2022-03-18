@@ -1,0 +1,27 @@
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (llibre*)>
+    <!ELEMENT llibre (titol, editorial, (edicio | ISBN), numero_de_pagines?, autor*)>
+    <!ELEMENT titol (#PCDATA)>
+    <!ELEMENT editorial (#PCDATA)>
+    <!ELEMENT edicio (#PCDATA)>
+    <!ELEMENT ISBN (#PCDATA)>
+    <!ELEMENT numero_de_pagines (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ATTLIST llibre codi ID #REQUIRED>
+]>
+<biblioteca>
+    <llibre codi="LL1">
+        <titol>The palm cove</titol>
+        <editorial>North point</editorial>
+        <edicio>2</edicio>
+        <numero_de_pagines>451763</numero_de_pagines>
+        <autor>Maria Fernandez</autor>
+        <autor>Abraham Lincoln</autor>
+    </llibre>
+    <llibre codi="LL2">
+        <titol>Beach Co.</titol>
+        <editorial>North point</editorial>
+        <ISBN>8431300980259</ISBN>
+        <autor>Confucio</autor>
+    </llibre>
+</biblioteca>

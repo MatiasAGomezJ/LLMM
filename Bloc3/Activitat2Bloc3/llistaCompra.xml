@@ -1,0 +1,23 @@
+<!DOCTYPE llistaCompra [
+    <!ELEMENT llistaCompra (producte*)>
+    <!ELEMENT producte (quantitat, preu)>
+    <!ATTLIST producte ref CDATA #REQUIRED>
+    <!ATTLIST producte fecha CDATA #IMPLIED>
+    <!ATTLIST producte seccio (alimentacio | drogueria | congelats) #REQUIRED>
+    <!ELEMENT quantitat (#PCDATA)>
+    <!ELEMENT preu (#PCDATA)>
+]>
+<llistaCompra>
+    <producte ref="86345374750238" seccio="alimentacio">
+        <quantitat>2</quantitat>
+        <preu>89.99</preu>
+    </producte>
+    <producte ref="45734554551647" seccio="drogueria">
+        <quantitat>500</quantitat>
+        <preu>6</preu>
+    </producte>
+    <producte ref="92127813781156" seccio="congelats">
+        <quantitat>10</quantitat>
+        <preu>12</preu>
+    </producte>
+</llistaCompra>

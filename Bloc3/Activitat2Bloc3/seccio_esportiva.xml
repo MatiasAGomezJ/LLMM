@@ -1,0 +1,22 @@
+<!DOCTYPE seccio_esportiva [
+    <!ELEMENT seccio_esportiva (esport*)>
+    <!ELEMENT esport (equip, categoria?, poblacio)>
+    <!ATTLIST esport nom NMTOKENS #REQUIRED>
+    <!ATTLIST esport modalitat (individual | grup) #REQUIRED>
+    <!ELEMENT equip (#PCDATA)>
+    <!ATTLIST equip codi ID #REQUIRED>
+    <!ELEMENT categoria (#PCDATA)>
+    <!ELEMENT poblacio (#PCDATA)>
+    <!ATTLIST poblacio pais CDATA #IMPLIED>
+]>
+<seccio_esportiva>
+    <esport nom="tennis de taula" modalitat="individual">
+        <equip codi="ma">Madrid</equip>
+        <categoria>si</categoria>
+        <poblacio>mucha</poblacio>
+    </esport>
+    <esport nom="futbol" modalitat="grup">
+        <equip codi="mall">Mallorca</equip>
+        <poblacio>bastante</poblacio>
+    </esport>
+</seccio_esportiva>
