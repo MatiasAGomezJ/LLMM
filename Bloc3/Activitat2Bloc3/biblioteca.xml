@@ -21,11 +21,11 @@
         <web>https://www.todostuslibros.com/libros/el-instituto_978-84-01-02235-7</web>
         <portada>/imatges/elinstituto.gif</portada>
     </llibre>
-    <Llibre codi="LL2" any="2000">
+    <llibre codi="LL2" any="2000">
         <titol>La ruta infinita</titol>
         </titol>
         <idioma>Espanyol</idioma>
         <genere>històrica</genere>
         <autor>José Calvo Poyato</autor>
-        </llibre>
+    </llibre>
 </biblioteca>
