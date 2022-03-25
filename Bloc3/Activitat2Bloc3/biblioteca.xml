@@ -2,8 +2,8 @@
     <!ELEMENT biblioteca (llibre*)>
     <!ELEMENT llibre (titol, idioma, genere, autor, web?, portada?)>
     <!ATTLIST llibre
-        codi CDATA ID #REQUIRED
-        any "2000" #REQUIRED
+        codi ID #REQUIRED
+        any CDATA "2000"
     >
     <!ELEMENT titol (#PCDATA)>
     <!ELEMENT idioma (#PCDATA)>
