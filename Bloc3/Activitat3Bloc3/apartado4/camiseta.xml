@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<camiseta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="camiseta.xsd">
+    <talla>S</talla>
+    <color>Vermell</color>
+    <preu>5</preu>
+</camiseta>

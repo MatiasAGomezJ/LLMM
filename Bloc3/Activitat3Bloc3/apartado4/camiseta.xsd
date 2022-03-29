@@ -1,0 +1,11 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="camiseta">
+        <xs:complexType mixed="true">
+            <xs:all>
+                <xs:element name="talla" type="xs:string" />
+                <xs:element name="color" type="xs:string" />
+                <xs:element name="preu" type="xs:integer" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
