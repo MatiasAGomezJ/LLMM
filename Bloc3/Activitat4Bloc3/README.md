@@ -9,6 +9,7 @@
 - L’element «nom», ha de tenir una llargària màxima de 15.
 
 Afegeix comentaris que expliquin breument el codi XSD:
+
 XML: "persones.xml"
 ```xml
 <persones>
