@@ -4,8 +4,7 @@
 - Els gols marcats per l'equip local.
 - Els gols marcats per l'equip visitant.
 
-2- Crea un esquema XSD que guardaràs amb el nom:"persones.xsd", pel següent arxiuXML.
-Restriccions:
+2- Crea un esquema XSD que guardaràs amb el nom:"persones.xsd", pel següent arxiu XML. Restriccions:
 - L’element «edat», només accepta 1-99.
 - L’element «nom», ha de tenir una llargària màxima de 15.
 
