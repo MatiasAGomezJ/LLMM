@@ -1,0 +1,24 @@
+<!DOCTYPE resultats [
+    <!ELEMENT resultats (resultat*)>
+    <!ELEMENT resultat (nom_equip_local,nom_equip_visitant,num_gols_local,num_gols_visitant)>
+    <!ATTLIST resultat fecha NMTOKEN #IMPLIED>
+    <!ELEMENT nom_equip_local (#PCDATA)>
+    <!ELEMENT nom_equip_visitant (#PCDATA)>
+    <!ELEMENT num_gols_local (#PCDATA)>
+    <!ELEMENT num_gols_visitant (#PCDATA)>
+]>
+
+<resultats>
+    <resultat>
+        <nom_equip_local>A</nom_equip_local>
+        <nom_equip_visitant>B</nom_equip_visitant>
+        <num_gols_local>7</num_gols_local>
+        <num_gols_visitant>1</num_gols_visitant>
+    </resultat>
+    <resultat fecha="02-03-2011">
+        <nom_equip_local>C</nom_equip_local>
+        <nom_equip_visitant>D</nom_equip_visitant>
+        <num_gols_local>0</num_gols_local>
+        <num_gols_visitant>2</num_gols_visitant>
+    </resultat>
+</resultats>
