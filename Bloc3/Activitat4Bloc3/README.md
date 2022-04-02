@@ -15,12 +15,12 @@ XML: "persones.xml"
 <persones>
   <persona sexe="dona">
     <nom>Inés </nom>
-    <llinatge>Ruíz<llinatge>
+    <llinatge>Ruíz</llinatge>
     <edat>36</edat>
     <data_naixement població="Madrid">3-10-1985</data_naixement>
   </persona>
   <persona>
-    <llinatge>Pons<llinatge>
+    <llinatge>Pons</llinatge>
     <edat>45</edat>
     <data_naixement població="Palma">3-10-1979</data_naixement>
   </persona>
