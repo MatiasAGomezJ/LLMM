@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persones.xsd">
+    <persona sexe="dona">
+        <nom>Inés</nom>
+        <llinatge>Ruíz</llinatge>
+        <edat>36</edat>
+        <data_naixement població="Madrid">3-10-1985</data_naixement>
+    </persona>
+    <persona>
+        <llinatge>Pons</llinatge>
+        <edat>45</edat>
+        <data_naixement població="Palma">3-10-1979</data_naixement>
+    </persona>
+</persones>
