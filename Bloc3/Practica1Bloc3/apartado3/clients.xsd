@@ -1,21 +1,32 @@
+<!-- SOLO EXPLICO LO QUE NO HA SALIDO ANTES -->
+<!-- LOS COMENTARIOS ESTÁN ARRIBA DE LO QUE EXPLICAN -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Elemento raíz -->
     <xs:element name="clients">
+        <!-- De tipo complejo, permite que tenga hijos -->
         <xs:complexType>
+            <!-- Los hijos tienen que estar en el ordén especificado, aunque solo hay 1 (client) -->
             <xs:sequence>
+                <!-- Elemento de nombre "client", (maxOccurs="unbounded") => no hay límite sobre cuantas veces puede aparecer-->
                 <xs:element name="client" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="llinatge" type="xs:string" maxOccurs="1"></xs:element>
-                            <xs:element name="edat" type="xs:integer" maxOccurs="1"></xs:element>
+                            <!-- Solo puede aparecer 1 vez-->
+                            <xs:element name="llinatge" type="xs:string" maxOccurs="1" />
+                            <xs:element name="edat" type="xs:integer" maxOccurs="1" />
                             <xs:element name="data_naixement" maxOccurs="1">
+                                <!-- Esta construcción de aquí permite que el elemento pueda tener tanto información como un atributo-->
                                 <xs:complexType>
                                     <xs:simpleContent>
                                         <xs:extension base="xs:string">
-                                            <xs:attribute name="poblacio" />
+                                            <!-- Atributo de nombre "poblacio", de tipo string y de uso obligatorio-->
+                                            <xs:attribute name="poblacio" type="xs:string" use="required" />
                                         </xs:extension>
                                     </xs:simpleContent>
                                 </xs:complexType>
+                                <!-- Fin de la construcción-->
                             </xs:element>
+                            <!-- "minOccurs" indica la mínima cantidad de veces que tiene que aparecer, en este caso no hace falta que aparezca -->
                             <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
                             <xs:element name="telefon" type="xs:integer" minOccurs="0" maxOccurs="1"></xs:element>
                         </xs:sequence>
