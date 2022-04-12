@@ -1,0 +1,16 @@
+<!-- SOLO SE EXPLICA LO QUE NO HA SALIDO ANTES -->
+<!-- LOS COMENTARIOS ESTÁN ARRIBA DE LO QUE EXPLICAN -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Elemento raíz -->
+    <xs:element name="capell">
+        <!-- De tipo complejo, permite que tenga hijos -->
+        <xs:complexType>
+            <!-- Los hijos tienen que estar en el órden especificado-->
+            <xs:sequence>
+                <!-- Elemento con el nombre "color" de tipo string-->
+                <xs:element name="color" type="xs:string"></xs:element>
+                <xs:element name="model" type="xs:string"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,11 +1,11 @@
-<!-- SOLO EXPLICO LO QUE NO HA SALIDO ANTES -->
+<!-- SOLO EXPLICA LO QUE NO HA SALIDO ANTES -->
 <!-- LOS COMENTARIOS ESTÁN ARRIBA DE LO QUE EXPLICAN -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <!-- Elemento raíz -->
     <xs:element name="clients">
         <!-- De tipo complejo, permite que tenga hijos -->
         <xs:complexType>
-            <!-- Los hijos tienen que estar en el ordén especificado, aunque solo hay 1 (client) -->
+            <!-- Los hijos tienen que estar en el órden especificado, aunque solo hay 1 (client) -->
             <xs:sequence>
                 <!-- Elemento de nombre "client", (maxOccurs="unbounded") => no hay límite sobre cuantas veces puede aparecer-->
                 <xs:element name="client" maxOccurs="unbounded">
