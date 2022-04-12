@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE relacio [
+    <!ELEMENT relacio (persona+)>
+    <!ELEMENT persona (nom, email, parentesc)>
+    <!ATTLIST persona sexe CDATA #IMPLIED>
+    <!ATTLIST persona identif ID #REQUIRED>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT parentesc (#PCDATA)>
+    <!ATTLIST parentesc pare IDREFS #IMPLIED>
+    <!ATTLIST parentesc germa IDREFS #IMPLIED>
+]>
+<relacio>
+    <persona sexe="home" identif="A01">
+        <nom>LLuís Merino</nom>
+        <email>llm@gmail.com</email>
+        <parentesc pare="B02 C03" />
+    </persona>
+    <persona sexe="home" identif="B02">
+        <nom>Rodrigo Merino</nom>
+        <email>rodrigo@gmail.com</email>
+        <parentesc germa="C03" />
+    </persona>
+    <persona identif="C03">
+        <nom>Ana Merino</nom>
+        <email>anam@icloud.com</email>
+        <parentesc germa="B02" />
+    </persona>
+</relacio>

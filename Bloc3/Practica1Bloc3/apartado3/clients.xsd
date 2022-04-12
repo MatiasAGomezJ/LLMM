@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="clients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="llinatge" type="xs:string" maxOccurs="1"></xs:element>
+                            <xs:element name="edat" type="xs:integer" maxOccurs="1"></xs:element>
+                            <xs:element name="data_naixement" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="poblacio" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+                            <xs:element name="telefon" type="xs:integer" minOccurs="0" maxOccurs="1"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="codi" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

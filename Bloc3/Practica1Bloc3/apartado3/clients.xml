@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<clients xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="clients.xsd">
+    <client codi="001">
+        <llinatge>Alomar</llinatge>
+        <edat>30</edat>
+        <data_naixement poblacio="Palma de Mallorca">3-10-1989</data_naixement>
+        <email>alomar@gmail.com</email>
+    </client>
+    <client codi="002">
+        <llinatge>Pérez</llinatge>
+        <edat>47</edat>
+        <data_naixement poblacio="Ciutadella">3-10-1975</data_naixement>
+        <telefon>600898989</telefon>
+    </client>
+</clients>
