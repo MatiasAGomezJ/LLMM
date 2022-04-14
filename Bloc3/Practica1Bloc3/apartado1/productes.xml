@@ -1,26 +1,26 @@
 <!DOCTYPE productes [
-    <!ELEMENT productes (producte+)>
-    <!ELEMENT producte (ratoli | teclat | monitor)>
+  <!ELEMENT productes (producte*)>
+  <!ELEMENT producte (ratoli | teclat | monitor)>
 
-    <!ELEMENT ratoli (#PCDATA)>
-    <!ATTLIST ratoli codi ID #REQUIRED>
+  <!ELEMENT ratoli (#PCDATA)>
+  <!ATTLIST ratoli codi ID #REQUIRED>
 
-    <!ELEMENT teclat (#PCDATA)>
-    <!ATTLIST teclat codi ID #REQUIRED>
-    
-    <!ELEMENT monitor (#PCDATA)>
-    <!ATTLIST monitor codi ID #REQUIRED>
+  <!ELEMENT teclat (#PCDATA)>
+  <!ATTLIST teclat codi ID #REQUIRED>
+  
+  <!ELEMENT monitor (#PCDATA)>
+  <!ATTLIST monitor codi ID #REQUIRED>
 ]>
 <productes>
-    <producte>
-        <ratoli codi="r01"> sense fil space </ratoli>
-    </producte>
-    <producte>
-        <teclat codi= "t03">Teclat de colors </teclat>
-    </producte>
-    <producte>
-        <teclat codi= "t04">Teclat de colors </teclat>
-        <!-- <monitor codi="m100">Tàctil</monitor> 
+  <producte>
+    <ratoli codi="r01">sense fil space</ratoli>
+  </producte>
+  <producte>
+    <teclat codi="t03">Teclat de colors</teclat>
+  </producte>
+  <producte>
+    <teclat codi="t04">Teclat de colors</teclat>
+    <!-- <monitor codi="m100">Tàctil</monitor> 
             Eliminat perque només pot ser un ratolí, un teclat o un monitor -->
-    </producte>
- </productes>
+  </producte>
+</productes>

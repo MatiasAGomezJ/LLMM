@@ -1,26 +1,26 @@
 <!-- SOLO SE EXPLICA LO QUE NO HA SALIDO ANTES -->
 <!-- LOS COMENTARIOS ESTÁN ARRIBA DE LO QUE EXPLICAN -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <!-- Elemento raíz -->
-    <xs:element name="pelicula">
-        <!-- De tipo complejo, permite que tenga hijos -->
-        <xs:complexType>
-            <!-- Los hijos tienen que estar en el órden especificado-->
+  <!-- Elemento raíz -->
+  <xs:element name="pelicula">
+    <!-- De tipo complejo, permite que tenga hijos -->
+    <xs:complexType>
+      <!-- Los hijos tienen que estar en el órden especificado-->
+      <xs:sequence>
+        <!-- Elemento con el nombre "director" de tipo string-->
+        <xs:element name="director" type="xs:string"></xs:element>
+        <xs:element name="repartiment">
+          <xs:complexType>
             <xs:sequence>
-                <!-- Elemento con el nombre "director" de tipo string-->
-                <xs:element name="director" type="xs:string"></xs:element>
-                <xs:element name="repartiment">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <!-- "maxOccurs" indica la  máxima cantidad de veces que puede que aparecer, en este caso puede aparecer infinitas veces -->
-                            <xs:element name="interpret" type="xs:string" maxOccurs="unbounded"></xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+              <!-- "maxOccurs" indica la  máxima cantidad de veces que puede que aparecer, en este caso puede aparecer infinitas veces -->
+              <xs:element name="interpret" type="xs:string" maxOccurs="unbounded"></xs:element>
             </xs:sequence>
-            <!-- Atributo de nombre "titol", de tipo string y de uso obligatorio-->
-            <xs:attribute name="titol" type="xs:string" use="required" />
-            <xs:attribute name="minuts" type="xs:integer" use="required" />
-        </xs:complexType>
-    </xs:element>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <!-- Atributo de nombre "titol", de tipo string y de uso obligatorio-->
+      <xs:attribute name="titol" type="xs:string" use="required" />
+      <xs:attribute name="minuts" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

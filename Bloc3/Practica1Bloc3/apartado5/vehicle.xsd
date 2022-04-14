@@ -1,17 +1,17 @@
 <!-- SOLO SE EXPLICA LO QUE NO HA SALIDO ANTES -->
 <!-- LOS COMENTARIOS ESTÁN ARRIBA DE LO QUE EXPLICAN -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <!-- Elemento raíz -->
-    <xs:element name="vehicle">
-        <!-- De tipo complejo, permite que tenga hijos -->
-        <xs:complexType>
-            <!-- Los hijos tienen que estar en el órden especificado-->
-            <xs:choice>
-                <!-- Elemento con el nombre "cotxe" de tipo string-->
-                <xs:element name="cotxe" type="xs:string"></xs:element>
-                <xs:element name="moto" type="xs:string"></xs:element>
-                <xs:element name="camió" type="xs:string"></xs:element>
-            </xs:choice>
-        </xs:complexType>
-    </xs:element>
+  <!-- Elemento raíz -->
+  <xs:element name="vehicle">
+    <!-- De tipo complejo, permite que tenga hijos -->
+    <xs:complexType>
+      <!-- Lo se escoge 1 de los hijos-->
+      <xs:choice>
+        <!-- Elemento con el nombre "cotxe" de tipo string-->
+        <xs:element name="cotxe" type="xs:string"></xs:element>
+        <xs:element name="moto" type="xs:string"></xs:element>
+        <xs:element name="camió" type="xs:string"></xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
