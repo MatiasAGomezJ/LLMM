@@ -5,7 +5,7 @@
   <xs:element name="vehicle">
     <!-- De tipo complejo, permite que tenga hijos -->
     <xs:complexType>
-      <!-- Lo se escoge 1 de los hijos-->
+      <!-- Solo se escoge 1 de los hijos-->
       <xs:choice>
         <!-- Elemento con el nombre "cotxe" de tipo string-->
         <xs:element name="cotxe" type="xs:string"></xs:element>
