@@ -8,7 +8,7 @@
   <!ELEMENT email (#PCDATA)>
   <!ELEMENT parentesc EMPTY>
   <!ATTLIST parentesc pare IDREFS #IMPLIED>
-  <!ATTLIST parentesc germa IDREF #IMPLIED>
+  <!ATTLIST parentesc germa IDREFS #IMPLIED>
 ]>
 <relacio>
   <persona sexe="home" identif="A01">

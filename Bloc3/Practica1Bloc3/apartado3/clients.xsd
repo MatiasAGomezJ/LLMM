@@ -7,19 +7,21 @@
     <xs:complexType>
       <!-- Los hijos tienen que estar en el órden especificado, aunque solo hay 1 (client) -->
       <xs:sequence>
-        <!-- Elemento de nombre "client", (maxOccurs="unbounded") => no hay límite sobre cuantas veces puede aparecer-->
+        <!-- Elemento de nombre "client", (maxOccurs="unbounded") => no hay límite sobre cuantas veces puede aparecer -->
         <xs:element name="client" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <!-- maxOccurs="1" indica que solo puede aparecer 1 vez como máximo-->
+              <!--
+                'maxOccurs="1"' indica que solo puede aparecer 1 vez como máximo
+                el atributo "type" indica el tipo de contenido que tendra, en este caso será string  
+              -->
               <xs:element name="llinatge" type="xs:string" maxOccurs="1" />
               <xs:element name="edat" type="xs:integer" maxOccurs="1" />
               <xs:element name="data_naixement" maxOccurs="1">
                 <!-- Esta construcción de aquí permite que el elemento pueda tener tanto información como un atributo-->
                 <xs:complexType>
                   <xs:simpleContent>
-                    <!-- El formato en el que está escrito la fecha no permite indicar que sea de tipo "date" -->
-                    <xs:extension base="xs:string">
+                    <xs:extension base="xs:date">
                       <!-- Atributo de nombre "poblacio", de tipo string y de uso obligatorio-->
                       <xs:attribute name="poblacio" type="xs:string" use="required" />
                     </xs:extension>

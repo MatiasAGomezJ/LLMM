@@ -8,9 +8,9 @@
       <!-- Solo se escoge 1 de los hijos-->
       <xs:choice>
         <!-- Elemento con el nombre "cotxe" de tipo string-->
-        <xs:element name="cotxe" type="xs:string"></xs:element>
-        <xs:element name="moto" type="xs:string"></xs:element>
-        <xs:element name="camió" type="xs:string"></xs:element>
+        <xs:element name="cotxe" type="xs:string" />
+        <xs:element name="moto" type="xs:string" />
+        <xs:element name="camió" type="xs:string" />
       </xs:choice>
     </xs:complexType>
   </xs:element>

@@ -8,12 +8,12 @@
       <!-- Los hijos tienen que estar en el órden especificado-->
       <xs:sequence>
         <!-- Elemento con el nombre "director" de tipo string-->
-        <xs:element name="director" type="xs:string"></xs:element>
+        <xs:element name="director" type="xs:string" />
         <xs:element name="repartiment">
           <xs:complexType>
             <xs:sequence>
               <!-- "maxOccurs" indica la  máxima cantidad de veces que puede que aparecer, en este caso puede aparecer infinitas veces -->
-              <xs:element name="interpret" type="xs:string" maxOccurs="unbounded"></xs:element>
+              <xs:element name="interpret" type="xs:string" maxOccurs="unbounded" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -18,41 +18,43 @@
                 <xs:complexType>
                   <xs:sequence>
                     <!-- Este elemento será de tipo string-->
-                    <xs:element name="nom" type="xs:string"/>
-                    <xs:element name="llinatges" type="xs:string"/>
-                    <!-- Como este elemento tiene una restriccion no indicamos el tipo aquí -->
-                    <xs:element name="dni">
-                      <xs:simpleType>
-                        <!-- Indicamos el tipo de infomación que contiene el elemento-->
-                        <xs:restriction base="xs:integer">
-                          <!-- "totalDigits" indica la máxima cantidad de digitos que puede tener el elemento -->
-                          <xs:totalDigits value="9" />
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
+                    <xs:element name="nom" type="xs:string" />
+                    <xs:element name="llinatges" type="xs:string" />
+                    <!-- "tipus_dni" es un tipo de datos que está creado mas abajo -->
+                    <xs:element name="dni" type="tipus_dni" />
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
               <!-- "minOccurs" indica la  mínima cantidad de veces que puede que aparecer, en este caso puede no aparecer. -->
-              <xs:element name="comentaris" minOccurs="0" maxOccurs="1">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <!-- 
-                      "minLenght" indica la minima cantidad de carácteres que puede tener el elemento,
-                      "maxLenght" indica la maxima cantidad.
-                    -->
-                    <xs:minLength value="5" />
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="comentaris" type="informacio" minOccurs="0" maxOccurs="1" />
             </xs:sequence>
             <!-- Atributo de nombre "data_naixement", de tipo string y de uso obligatorio-->
-            <!-- -->
             <xs:attribute name="data_naixement" type="xs:date" use="required" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <!-- Primer tipo custom -->
+  <xs:simpleType name="tipus_dni">
+    <!-- Indicamos el tipo de infomación que contiene el elemento-->
+    <xs:restriction base="xs:integer">
+      <!-- "totalDigits" indica la máxima cantidad de digitos que puede tener el elemento -->
+      <xs:totalDigits value="9" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Segundo tipo custom -->
+  <xs:simpleType name="informacio">
+    <xs:restriction base="xs:string">
+      <!-- 
+        "minLenght" indica la minima cantidad de carácteres que puede tener el elemento,
+        "maxLenght" indica la maxima cantidad.
+      -->
+      <xs:minLength value="5" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>

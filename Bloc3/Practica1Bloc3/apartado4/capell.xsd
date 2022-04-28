@@ -8,8 +8,8 @@
       <!-- Los hijos tienen que estar en el órden especificado-->
       <xs:sequence>
         <!-- Elemento con el nombre "color" de tipo string-->
-        <xs:element name="color" type="xs:string"></xs:element>
-        <xs:element name="model" type="xs:string"></xs:element>
+        <xs:element name="color" type="xs:string" />
+        <xs:element name="model" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
