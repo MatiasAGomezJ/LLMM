@@ -13,7 +13,7 @@ locals?
 ```
 count(//jugador[@minut<45]/../..[@juga="local"])
 ```
-4. Quants partits en els quals jugaven els "Elefants"jvght empatats?
+4. Quants partits en els quals jugaven els "Elefants" han quedat empatats?
 ```
 
 ```
